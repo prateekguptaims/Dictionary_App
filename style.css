@@ -1,0 +1,97 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+:root{
+    --header-color:#008080;
+    --bcg-color:#f55f5f5;
+    --padding: 20px;
+    --border-radius: 5px;
+    --text-color:#fff;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--bcg-color);
+    width: 100vw;
+}
+header{
+    background-color: var(--header-color);
+    padding:var(--padding);
+    color: var(--text-color);
+}
+header h1{
+    font-size: 35px;
+}
+main{
+    min-height: 80vh;
+    padding: var(--padding);
+    max-width: 800px;
+    margin: 0 auto;
+}
+main form{
+    display: flex;
+    justify-content: center;
+
+}
+form input{
+    flex-grow: 1;
+   
+}
+.result li{
+    padding: calc(var(--padding)/6);
+}
+.result div{
+    margin-top: 20px;
+}
+.result div a{
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--header-color);
+    margin-top: 10px;
+}
+form input[type="text"], button[type="submit"], .result div a{
+    border-radius: var(--border-radius);
+    border: 1px solid #eee;
+    font-size: 16px;
+    font-weight: 500;
+    padding: calc(var(--padding)/2);
+}
+form button[type="submit"]{
+    background-color: var(--header-color);
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+footer{
+    background-color: var(--header-color);
+    padding: var(--padding);
+   color: #fff;
+   font-size: 18px;
+   position: fixed;
+   width: 100%;
+   text-align: center;
+}
+
+.result p{
+    margin-top: 15px;
+}
+.result{
+    background-color: #fff;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.result p[class="partofspeech"]{
+    font-style: italic;
+    color: #808080;
+    margin-top: 2px;
+}
+@media screen and (max-width:320px) {
+    main form{
+        flex-direction: column;
+    }
+    form button[type="submit"]{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
